@@ -9,15 +9,13 @@
 function solution(progresses, speeds) {
     var answer = [];
     var pro = [];
-    var i = 0;
+    var count = 0;
     for(let i = 0; i < progresses.length; i++){
         pro.push(progresses[i]);
     }
-    var count = 0;
     while(pro.length > 0){
         pro[0] = pro[0]+speeds[0];
         count++;
-       // console.log(pro)
         if(pro[0]>=100){
             var cnt = 0;
             pro.shift();
