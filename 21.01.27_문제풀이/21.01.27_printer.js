@@ -35,9 +35,8 @@ function solution(priorities, location) {
         if(count == priorities.length){
             anspaper.push(b1);
         }
-        console.log(priorities, paper, anspaper)
+        //console.log(priorities, paper, anspaper)
     }
     answer = anspaper.indexOf(want)+1;
-    console.log(priorities, paper);
     return answer;
 }
