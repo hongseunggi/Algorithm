@@ -15,25 +15,25 @@ function solution(priorities, location) {
     var answer = 0;
     var paper = [];
     var anspaper = [];
-    let a = 97;
+    var a = 97;
     for(let i = 0; i < priorities.length; i++, a++){
         paper[i] = String.fromCharCode(a);
     }
     var want = paper[location];
     for(let i = 0; i < priorities.length;){
-        var a1 = priorities.shift();
-        var b1 = paper.shift();
-        var count = 0;
+        let pr_first = priorities.shift();
+        let pa_first = paper.shift();
+        let count = 0;
         for(let j = 0; j < priorities.length; j++){
             count++;
-            if(a1 < priorities[j]){
-                priorities.push(a1);
-                paper.push(b1);
+            if(pr_first < priorities[j]){
+                priorities.push(pr_first);
+                paper.push(pa_first);
                 break;
             }
         }
         if(count == priorities.length){
-            anspaper.push(b1);
+            anspaper.push(pa_first);
         }
         //console.log(priorities, paper, anspaper)
     }
